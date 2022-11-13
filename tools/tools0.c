@@ -6,7 +6,7 @@
 /*   By: nloutfi <nloutfi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 12:31:59 by nloutfi           #+#    #+#             */
-/*   Updated: 2022/11/13 15:12:06 by nloutfi          ###   ########.fr       */
+/*   Updated: 2022/11/13 23:21:47 by nloutfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	word_counter(char const *str, char c)
 
 	i = 0;
 	words = 0;
-	while (str[i])
+	while (str && str[i])
 	{
 		while (str[i] == c && str[i] != '\0')
 			i++;

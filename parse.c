@@ -6,7 +6,7 @@
 /*   By: nloutfi <nloutfi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:07:54 by nloutfi           #+#    #+#             */
-/*   Updated: 2022/11/12 15:12:35 by nloutfi          ###   ########.fr       */
+/*   Updated: 2022/11/13 23:19:01 by nloutfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,9 @@ void	fill_map(int *z_line, char *line)
 	while (nums[i])
 	{
 		z_line[i] = ft_atoi(nums[i]);
-		//dprintf(2,"%d",z_line[i]);
 		free(nums[i]);
 		i++;
 	}
-	//printf("\n");
 	free(nums);
 }
 
@@ -84,13 +82,11 @@ t_vars	*parse(char *file_name)
 	while (str)
 	{
 		fill_map(vars->map[i], str);
-		//printf("%d\n",vars->mape[i]);
 		free(str);
 		str = get_next_line(fd);
 		i++;
 	}
 	free(str);
 	close(fd);
-	//free(vars->mape[i]);
 	return (vars);
 }
